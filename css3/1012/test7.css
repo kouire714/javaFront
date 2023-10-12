@@ -1,0 +1,43 @@
+/* test7.css */
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.container {
+    /* width: 1000px; */
+    height: 100vh;
+    background-color: #eee;
+}
+
+.item {
+    margin: 10px;
+    padding: 10px;
+    background-color: yellow;
+}
+
+/* 플렉스와 마찬가지로 부모요소에서 배치 */
+.big-item1, .big-item2 {
+    display: grid;
+    /* 상/하 마진이 h2태그(문단태그)의 기본 마진과 겹치게됨  */
+    margin: 20px;
+}
+
+/* 
+.big-item1 {
+    grid-template-columns: repeat(3, 200px);
+}
+
+.big-item2 {
+    grid-template-columns: repeat(4, 100px);
+}
+*/
+
+/* 그리드 행과 열의 형태 정의 */
+.big-item1 {
+    grid-template-rows: 100px 200px;
+}
+
+.big-item2 {
+    grid-template-rows: 100px 200px;
+    grid-template-columns: repeat(3, 200px)
+}

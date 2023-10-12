@@ -6,7 +6,7 @@
   <title>test8.html</title>
   <style>
     .dd {
-      background-color: chartreuse;
+      background-color: brown;
       font-size: 20pt;
     }
     table {
@@ -22,10 +22,11 @@
     }
     thead, th {
       background-color: aqua;
-      color: brown;
+      color: rosybrown;
     }
+    /* th는 제목을 뜻하는 html문으로 css로 지정할 경우 hover의 적용을 받지않는다 */
     tfoot {
-      background-color: brown;
+      background-color: rosybrown;
     }
     tbody {
       background-color: blueviolet;
@@ -47,9 +48,9 @@
     </thead>
     <tbody>
       <tr>
-        <td>4</td>
-        <td class="dd">5</td>
-        <td>6</td>
+        <th>4</th>
+        <th class="dd">5</th>
+        <th>6</th>
       </tr>
       <tr>
         <td>7</td>

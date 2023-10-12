@@ -1,0 +1,65 @@
+/* test6.css */
+body {
+    margin: 0px;
+    font-size: 0.8em;
+}
+.container {
+    background-color: bisque;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.item {
+    width: 150px;
+    height: 150px;
+    border: 1px solid gray;
+    text-align: center;
+}
+
+/* .item:nth-child(1) {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+} */
+
+.item1 {
+    background-color: firebrick;
+    /* 순서설정(전체를 설정해주어야 제대로 적용됨) */
+    order: 2;
+
+    /* 수치만큼 늘어나는 비율 증가 */
+    /* flex-grow: 3; */
+
+    /* 수치만큼 축소되는 비율 증가 */
+    /* flex-shrink: 3; */
+
+    /* 폭조절시 폭이 변화시키며 비율만큼 변화한다 */
+    /* flex-basis: 50%; */
+    
+    /* align-self는 부모요소의 자식 아이템을 따로 정렬할 수 있음 */
+    align-self: center;
+}
+
+.item2 {
+    background-color: salmon; 
+    order: 1;
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+}
+
+.item3 {
+    background-color: forestgreen; 
+    order: 3;
+    /* flex-basis:10%; */
+    align-self: center;
+}
+
+.item4 {background-color: violet; order: 4;}
+.item5 {background-color: chocolate; order: 5;}
+.item6 {background-color: deeppink; order: 6;}
+.item7 {background-color: red; order: 7;}
+.item8 {background-color: skyblue; order: 8;}
+.item9 {background-color: darkcyan; order: 9;}
+.item10 {background-color: chartreuse; order: 10;}

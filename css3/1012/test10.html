@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test10.html</title>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: 
+                'header header'
+                'aside content'
+                'footer footer';
+            /* 블록크기를 다르게 지정하고 싶다면.. */
+            grid-template-rows: 150px 1fr 100px;
+            grid-template-columns: 150px 1fr;
+            margin: 50px 50px;
+            
+            height: 800px;
+        }
+
+        .item {
+            padding: 20px;
+        }
+
+        .header {
+            grid-area: header;
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            background-color: green;
+        }
+        .aside {
+            grid-area: aside;
+            color: brown;
+            font-size: 25px;
+            font-weight: bold;
+            background-color: yellow;
+            /* width: 200px; */
+        }
+        .content {
+            grid-area: content;
+            color: brown;
+            font-size: 25px;
+            font-weight: bold;
+            background-color: pink;
+        }
+        .footer {
+            grid-area: footer;
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            background-color: gray;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item header">header</div>
+        <div class="item aside">aside</div>
+        <div class="item content">
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+            <p>content</p>
+        </div>
+        <div class="item footer">footer</div>
+    </div>
+</body>
+</html>
