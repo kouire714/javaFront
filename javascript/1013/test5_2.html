@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test5.html</title>
+    <script>
+        // 'use strict' 변수 선언없이 변수를 사용할 수 없도록 만듦
+        'use strict';
+        
+        // let / const 타입은 변수 선언없이 사용할 수 없는 자료형
+        let sbs;
+        const kbs = 100;
+        
+        // const는 상수라서 변수 선언 이후 값 변경이 불가능함
+        // kbs = 200;
+
+        // cjb = 200;
+
+        console.log("sbs : ", sbs);
+        console.log("kbs : ", kbs);
+        // console.log("cjb : ", cjb);
+        // console.log("seoul : ", seoul);
+        
+        // let sbs;
+        // var sbs;
+        // var seoul;
+
+        function calc() {
+            sbs = mbc + 50;
+            console.log("sbs = ", sbs);
+        }
+        
+        var mbc = 100;
+    </script>
+</head>
+<body>
+    <h2>변수의 선언</h2>
+    <input type="button" value="계산" onclick="calc()" />
+</body>
+</html>
