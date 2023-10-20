@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test5.html</title>
+    <script>
+        // ES6 이전 var 어디에든 사용가능하지만 메모리에 부담이 됨
+        // ES6 이후 let const 변수를 한번만 선언
+        // 호이스팅(hoisting) : var 변수는 변수 선언 전에 사용해도 에러가 나지않음(특수 메모리) 
+        console.log("sbs : ", sbs);
+        
+        var sbs;
+
+        function calc() {
+            sbs = mbc + 50;
+            console.log("sbs = ", sbs);
+        }
+        
+        var mbc = 100;
+    </script>
+</head>
+<body>
+    <h2>변수의 선언</h2>
+    <input type="button" value="계산" onclick="calc()" />
+</body>
+</html>

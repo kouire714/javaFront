@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test3_getter_setter.html</title>
+</head>
+<script>
+    'use strict';
+
+    class Member {
+        // 매개변수명과 필드명이 같을 경우 필드명 생략 가능
+        // name;
+        // age;
+        // color;
+
+        // 생성자 (매개변수에서 타입이 무시됨)
+        constructor(name, age, color) {
+            this.name = name;
+            this.age = age;
+            this.color = color;
+        }
+
+        // getter 생성
+        // js에서는 생성자 안에 gettersetter가 기본값으로 포함되어 있음
+        // getter setter 내부에서는 this._(변수명)
+        get name() {
+            return this._name;
+        }
+        get age() {
+            return this._age;
+        }
+        get color() {
+            return this._color;
+        }
+
+        // setter 생성
+        // js에서는 setter함수가 아닌 필드로 직접변경하고 자동으로 setter 함수를 거치게됨
+        // 다른 처리가 없는 setter 함수는 생략가능
+        set name(name) {
+            this._name = name;
+        }
+        // 유효성검사를 하기에 setter 함수가 필요
+        set age(age) {
+            if(age < 1) age = 1;
+            this._age = age;
+        }
+        set color(color) {
+            if(color == "깜정" || color == "흑색") color = "검정";
+            this._color = color;
+        }
+    }
+
+        let member = new Member('홍길동', 35, '청록');
+        console.log("member : ", member);
+        console.log("name : ", member.name, "age : ", member.age, "color : ", member.color);
+
+        member.age = -1
+        // member.color("깜정");
+        member.color = "깜정";  // 필드에 값을 주입하면 자동으로 setter를 통해서 필드에 값이 주입되게 된다.
+        console.log("name :", member.name, " , age :", member.age, " , color :", member.color);
+</script>
+<body>
+    <h2>getter_setter 연습</h2>
+</body>
+</html>

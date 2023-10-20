@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test1.html</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ES6 이전에는 본문을 입력받기 위해 스크립트창이 맨뒤 -->
+    <script>
+        'use strict';
+
+        function forCheck() {
+            // document는 새로운 객체를 생성함으로 다른 함수에서 document가 생성되면 다시 script를 만들어야함
+            // html문에 닫는 / 제어코드 앞에 \를 붙여주어야함
+            document.write('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">');
+            document.write('<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"><\/script>');
+            document.write('<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"><\/script>');
+            document.write('<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"><\/script>');
+
+            document.write("<div class='container'>")
+            for(let i=0; i<10; i++) {
+                // document.write("번호 "+i+" 안녕~~~<br />");
+                
+                // EL표기법(Expresstion) `(back tik)을 이용한 문자열에 변수 넣는 방법 
+                document.write(`번호 ${i} 안녕~~~<br />`);
+            }
+            // 바깥이 큰따옴표라면 안쪽안 작은따옴표 바깥이 작으면 안은 큰따옴표
+            document.write('<a href="test1.html" class="btn btn-success">돌아가기</a>');
+            document.write('</div>')
+        }
+
+    </script>
+</head>
+<body>
+    <h2>For 반복문 연습</h2>
+    <p>
+        <input type="button" value="for문연습" onclick="forCheck()" />
+    </p>
+
+</body>
+</html>
