@@ -31,11 +31,10 @@
             $('.container input[name="mapBtn"]').click(function() {
                 let fruitArray2 = $('.container input[class="fruit"]').map((index, data) => {
                     if ($(data).is(':checked')) return $(data).val();
-                }).get().join("/");
+                }).get().join("/"); // chaining으로 묶어 join 함수를 사용하면 get()을 사용해야함
                 console.log(fruitArray2);
                 $("#demo").html(fruitArray2);
             });
-
         });
 
     </script>

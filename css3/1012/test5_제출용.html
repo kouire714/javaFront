@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test5.html(반응형 웹사이트)</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        div {
+            background-color: #eee;
+            border: 2px solid gray;
+            font-size: 25px;
+        }
+        div#area {
+            width: 960px;
+            margin: 0 auto;
+            height: 350px;
+            background-color: blueviolet;
+        }
+        #tbl {
+            width: 960px;
+            margin: 0 auto;
+            height: 450px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #bbb;
+            text-align: center;
+        }
+        div#img {
+            text-align: center;
+        }
+
+        div#img img {
+            width: 960px;
+        }
+
+        /* 미디어 쿼리 */
+        /* screen width  >= 1024px (max-width < 1024px) == (max-width:1024px) */
+        @media screen and (max-width:1023px){
+            .container {
+            width: 700px;
+            margin: 0 auto;
+            font-size: 15px;
+            }
+            div {
+                background-color: #eee;
+                border: 2px solid gray;
+                font-size: 20px;
+            }
+            div#area {
+                width: 680px;
+                margin: 0 auto;
+                height: 200px;
+                background-color: pink;
+            }
+            #tbl {
+                width: 680px;
+                margin: 0 auto;
+                height: 250px;
+                border-collapse: collapse;
+            }
+
+            div#img img {
+                width: 680px;
+            }
+        }
+
+        @media screen and (max-width:768px){
+            .container {
+            width: 460px;
+            margin: 0 auto;
+            font-size: 12px;
+            }
+            div {
+                background-color: #eee;
+                border: 2px solid gray;
+                font-size: 14px;
+            }
+            div#area {
+                width: 450px;
+                margin: 0 auto;
+                height: 100px;
+                background-color: pink;
+            }
+            #tbl {
+                width: 450px;
+                margin: 0 auto;
+                height: 150px;
+                border-collapse: collapse;
+            }
+
+            div#img img {
+                width: 450px;
+            }
+        }
+
+        @media screen and (max-width:400px){
+            .container {
+            width: 200px;
+            margin: 0 auto;
+            font-size: 10px;
+            }
+            div {
+                background-color: #eee;
+                border: 2px solid gray;
+                font-size: 10px;
+            }
+            div#area {
+                width: 190px;
+                margin: 0 auto;
+                height: 100px;
+                background-color: yellowgreen;
+            }
+            #tbl {
+                width: 190px;
+                margin: 0 auto;
+                height: 150px;
+                border-collapse: collapse;
+            }
+
+            div#img img {
+                width: 190px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>청주 식물원</h2>
+        <p>(반응형 웹사이트 : Responsive Web Disign)</p>
+        <hr />
+        <ul>
+            <li><a href="#">식물원 소개</a></li>
+            <li><a href="#">시설 안내</a></li>
+            <li><a href="#">체험학습 안내</a></li>
+            <li><a href="#">커뮤니티</a></li>
+        </ul>
+        <hr />
+        <div>체험 프로그램</div>
+        <hr />
+        <div></div>
+        <hr />
+        <table id="tbl">
+            <tr>
+                <th>주제</th>
+                <th>강사</th>
+                <th>장소</th>
+            </tr>
+            <tr>
+                <td>모종 심기 체험</td>
+                <td>홍길동</td>
+                <td>그린관 105호</td>
+            </tr>
+            <tr>
+                <td>화분 만들기</td>
+                <td>김말숙</td>
+                <td>그린관 106호</td>
+            </tr>
+        </table>
+        <hr />
+        <div id="img">
+            <img src="../../images/식물.jpg" />
+        </div>
+    </div>
+</body>
+</html>
